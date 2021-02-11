@@ -19,7 +19,8 @@ class _TransactionInputState extends State<TransactionInput> {
   DateTime _selectedDate;
 
   void _submitData() {
-    final _enteredTitle = _titleController.text;
+    var text = _titleController.text;
+    final _enteredTitle = text;
     final _enteredCost = double.parse(_costController.text);
 
     if (_enteredTitle.isEmpty || _enteredCost <= 0 || _selectedDate == null) {
